@@ -48,7 +48,8 @@ words = \lyricmode {
     gis2:m fis2 | cis1:m
     }
 
-    \new Staff \new Voice = "pno" \relative gis' {
+    \new Staff \with { instrumentName = "Přechod" } 
+    \new Voice = "pno"  \relative gis' {
     \clef "treble"
     \key gis \minor
     \time 4/4
@@ -96,7 +97,8 @@ words = \lyricmode {
     gis2:m fis2 | cis1:m | 
     }
 
-    \new Staff \new Voice = "pno" \relative gis' {
+    \new Staff \with { instrumentName = "Outro" }
+    \new Voice = "pno" \relative gis' {
     \clef "treble"
     \key gis \minor
     \time 4/4
