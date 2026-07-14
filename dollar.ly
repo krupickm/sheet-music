@@ -41,7 +41,15 @@ words = \lyricmode {
   <<
     \new ChordNames \chordmode {
     gis2:m fis2 | cis2..:m dis8:m | 
-    gis2:m fis2 | cis2..:m dis8:m | 
+     
+    \repeat volta 2 {
+    gis2:m fis2 | cis2.:m
+      \alternative { 
+        \volta 1 { cis4:m } 
+        \volta 2 { dis4:m }  
+      }
+    }
+    |
     dis2:m gis2:m | cis1:m |
     dis2:m gis2:m | cis1:m |
     dis2:m gis2:m | cis1:m | cis2..:m dis8:m |
@@ -57,10 +65,16 @@ words = \lyricmode {
     <gis b dis>8 q q q  <fis ais cis>8 q q q |
      <gis cis e>8 q q q q q r8 <fis ais dis>8 |
     
+    \repeat volta 2 {
     <gis b dis>8 q q q  <fis ais cis>8 q q q |
-     <gis cis e>8 q q q q q r8 <fis ais dis>8 |
-    
-    <fis ais dis>2  <gis b dis>2 |  <gis cis e>1  |
+    <gis cis e>8 q q q q q
+     \alternative  {
+      \volta 1  {  q q  } 
+      \volta 2  {  r8 <fis ais dis>8 } 
+     }
+    }
+    |
+    <fis ais dis>2  <gis b dis>2 |  <gis cis e>1  | 
     <fis ais dis>2  <gis b dis>2 |  <gis cis e>1  |
   <fis ais dis>2  <gis b dis>2 |  <gis cis e>1  | q2. r8 <fis ais dis>8  |
 
@@ -74,9 +88,10 @@ words = \lyricmode {
   %% min nez je "udalosti" v taktu.
   loo -- king for some bo -- dy come and
   help me carry this load - -
-
+\repeat volta 2 {
   Well I need a dol -- lar, dol -- lar,
-  dol -- lar is what I need -    
+  dol -- lar is what I need - - -    }
+
   "Well I dont" "know if I'" "m walking on solid ground"   
   "Cause" "everything around me" "is falling down"
   "And all I" "want is for" "someone to help me"
